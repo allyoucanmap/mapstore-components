@@ -1,0 +1,22 @@
+.border-layout {
+    color: var(--color);
+    background-color: var(--background-color);
+    font-size: var(--font-size-md);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .border-layout-body {
+        position: relative;
+        display: flex;
+        flex: 1;
+    }
+
+    .border-layout-content {
+        position: relative;
+        flex: 1;
+        overflow: auto;
+    }
+}

@@ -1,0 +1,21 @@
+
+.filter {
+    display: flex;
+    align-items: center;
+    input {
+        flex: 1;
+        border: 1px solid var(--border-color);
+        height: var(--button-square-size-md);
+        padding: var(--padding-sm) var(--padding-md);
+        border-right: none;
+    }
+    >.glyph {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--border-color);
+        width: var(--button-square-size-md);
+        height: var(--button-square-size-md);
+        font-size: var(--button-square-font-size-md);
+    }
+}

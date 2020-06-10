@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline-style: solid;
+    outline-color: var(--outline-color);
+}
+
+.mark {
+    color: var(--highlight-color);
+    background-color: var(--highlight-background-color);
+}
+
+label {
+    padding: 0 var(--padding-md);
+}
+
+input {
+    background-color: var(--background-color);
+    &::placeholder {
+        color: var(--placeholder-color);
+        opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+        color: var(--placeholder-color);
+    }
+
+    &::-ms-input-placeholder {
+        color: var(--placeholder-color);
+    }
+}

@@ -1,0 +1,175 @@
+@mixin button-theme($color,
+    $background-color,
+    $border-color,
+
+    $color-hover,
+    $background-color-hover,
+    $border-color-hover,
+
+    $color-active,
+    $background-color-active,
+    $border-color-active,
+
+    $color-disabled,
+    $background-color-disabled,
+    $border-color-disabled,
+
+    $outline-color) {
+
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+
+    cursor: pointer;
+
+    &:hover {
+        color: $color-hover;
+        background-color: $background-color-hover;
+        border-color: $border-color-hover;
+    }
+
+    &:active,
+    &.active {
+        color: $color-active;
+        background-color: $background-color-active;
+        border-color: $border-color-active;
+    }
+
+    &:disabled,
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        color: $color-disabled;
+        background-color: $background-color-disabled;
+        border-color: $border-color-disabled;
+    }
+
+    &:focus {
+        outline-color: $outline-color;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: var(--padding-sm);
+    font-size: var(--font-size-md);
+    border: 1px solid transparent;
+
+    &.lg {
+        font-size: var(--font-size-lg);
+    }
+
+    &.md {
+        font-size: var(--font-size-md);
+    }
+
+    &.sm {
+        font-size: var(--font-size-sm);
+    }
+
+    @include button-theme( // base
+        var(--button-color), var(--button-background-color), var(--button-border-color),
+        // hover
+        var(--button-hover-color), var(--button-hover-background-color), var(--button-hover-border-color),
+        // active
+        var(--button-active-color), var(--button-active-background-color), var(--button-active-border-color),
+        // disabled
+        var(--button-disabled-color), var(--button-disabled-background-color), var(--button-disabled-border-color),
+        // focus
+        var(--button-outline-color));
+
+    &.primary {
+        @include button-theme( // base
+            var(--button-primary-color), var(--button-primary-background-color), var(--button-primary-border-color),
+            // hover
+            var(--button-primary-hover-color), var(--button-primary-hover-background-color), var(--button-primary-hover-border-color),
+            // active
+            var(--button-primary-active-color), var(--button-primary-active-background-color), var(--button-primary-active-border-color),
+            // disabled
+            var(--button-primary-disabled-color), var(--button-primary-disabled-background-color), var(--button-primary-disabled-border-color),
+            // focus
+            var(--button-primary-outline-color));
+
+        .loader {
+            border-top-color: var(--button-primary-loader-fade-border-color);
+            border-right-color: var(--button-primary-loader-fade-border-color);
+            border-bottom-color: var(--button-primary-loader-fade-border-color);
+            border-left-color: var(--button-primary-loader-border-color);
+        }
+    }
+
+    &.success {
+        @include button-theme( // base
+            var(--button-success-color), var(--button-success-background-color), var(--button-success-border-color),
+            // hover
+            var(--button-success-hover-color), var(--button-success-hover-background-color), var(--button-success-hover-border-color),
+            // active
+            var(--button-success-active-color), var(--button-success-active-background-color), var(--button-success-active-border-color),
+            // disabled
+            var(--button-success-disabled-color), var(--button-success-disabled-background-color), var(--button-success-disabled-border-color),
+            // focus
+            var(--button-success-outline-color));
+
+        .loader {
+            border-top-color: var(--button-success-loader-fade-border-color);
+            border-right-color: var(--button-success-loader-fade-border-color);
+            border-bottom-color: var(--button-success-loader-fade-border-color);
+            border-left-color: var(--button-success-loader-border-color);
+        }
+    }
+
+    +.button {
+        margin-left: var(--padding-sm);
+    }
+
+    &.square {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: var(--button-square-size-md);
+        height: var(--button-square-size-md);
+        font-size: var(--button-square-font-size-md);
+        padding: 0;
+        overflow: hidden;
+
+        &.lg {
+            width: var(--button-square-size-lg);
+            height: var(--button-square-size-lg);
+            font-size: var(--button-square-font-size-lg);
+        }
+
+        &.md {
+            width: var(--button-square-size-md);
+            height: var(--button-square-size-md);
+            font-size: var(--button-square-font-size-md);
+        }
+
+        &.sm {
+            width: var(--button-square-size-sm);
+            height: var(--button-square-size-sm);
+            font-size: var(--button-square-font-size-sm);
+        }
+    }
+}
+
+.selected {
+    .button {
+        @include button-theme( // base
+            var(--button-selected-color), var(--button-selected-background-color), var(--button-selected-border-color),
+            // hover
+            var(--button-selected-hover-color), var(--button-selected-hover-background-color), var(--button-selected-hover-border-color),
+            // active
+            var(--button-selected-active-color), var(--button-selected-active-background-color), var(--button-selected-active-border-color),
+            // disabled
+            var(--button-selected-disabled-color), var(--button-selected-disabled-background-color), var(--button-selected-disabled-border-color),
+            // focus
+            var(--button-selected-outline-color));
+
+        .loader {
+            border-top-color: var(--button-selected-loader-fade-border-color);
+            border-right-color: var(--button-selected-loader-fade-border-color);
+            border-bottom-color: var(--button-selected-loader-fade-border-color);
+            border-left-color: var(--button-selected-loader-border-color);
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+.input {
+    display: flex;
+    align-items: center;
+    input {
+        flex: 1;
+        background-color: var(--background-color);
+        border: 1px solid var(--border-color);
+        height: var(--button-square-size-md);
+        padding: var(--padding-sm) var(--padding-md);
+        &::placeholder {
+            color: var(--placeholder-color);
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: var(--placeholder-color);
+        }
+
+        &::-ms-input-placeholder {
+            color: var(--placeholder-color);
+        }
+    }
+}
+
+.label {
+    font-size: var(--font-size-sm);
+    display: inline-flex;
+    padding: var(--padding-md);
+}

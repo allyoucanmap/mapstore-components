@@ -1,0 +1,58 @@
+.feature-card {
+    color: var(--color);
+    background-color: var(--background-color);
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    border: 1px solid var(--border-color);
+
+    .feature-card-preview {
+        width: var(--button-square-size-md);
+        height: var(--button-square-size-md);
+        font-size: var(--button-square-font-size-md);
+        padding: var(--padding-sm);
+        margin: 0 var(--padding-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feature-card-info {
+        padding: var(--padding-sm);
+        flex: 1;
+        overflow: hidden;
+
+        >* {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+        }
+    }
+
+    .toolbar {
+        padding: var(--padding-sm);
+    }
+}
+
+.feature-collection ul,
+.feature-collection li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-collection {
+    color: var(--color);
+    background-color: var(--background-color);
+
+    .feature-collection-list {
+        position: absolute;
+        width: 100%;
+        padding:var(--padding-md);
+
+        li+li {
+            margin-top: var(--padding-md);
+        }
+    }
+}

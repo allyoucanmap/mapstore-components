@@ -1,0 +1,93 @@
+.slider {
+
+    position: relative;
+    width: 100%;
+
+    .rc-slider {
+        padding: 0;
+        height: var(--padding-sm);
+        -webkit-tap-highlight-color: var(--slider-tap-highlight-color);
+    }
+
+    .rc-slider * {
+        -webkit-tap-highlight-color: var(--slider-tap-highlight-color);
+    }
+
+    .rc-slider-rail {
+        background-color: var(--slider-rail-background-color);
+    }
+
+    .rc-slider-track {
+        background-color: var(--slider-track-background-color);
+    }
+
+    .rc-slider-handle {
+        width: calc(var(--padding-sm) * 2.5);
+        height: calc(var(--padding-sm) * 2.5);
+        margin-top: calc(var(--padding-sm) * -0.75);
+        border: solid 1px var(--slider-handle-border-color);
+        background-color: var(--slider-handle-background-color);
+        border-radius: 0;
+    }
+
+    .rc-slider-handle-dragging.rc-slider-handle-dragging.rc-slider-handle-dragging {
+        border-color: var(--slider-handle-border-color)-active;
+        box-shadow: 0 0 0 5px var(--slider-handle-border-color);
+    }
+
+    .rc-slider-handle-click-focused:focus {
+        border-color: var(--slider-handle-border-color);
+    }
+
+    .rc-slider-handle:hover {
+        border-color: var(--slider-handle-border-color)-active;
+    }
+
+    .rc-slider-handle:active {
+        border-color: var(--slider-handle-border-color)-active;
+        box-shadow: 0 0 5px var(--slider-handle-border-color)-active;
+    }
+
+    .rc-slider-mark-text {
+        color: var(--color);
+    }
+
+    .rc-slider-mark-text-active {
+        color: var(--color);
+    }
+
+    .rc-slider-dot {
+        border-radius: 0;
+        border: 2px solid var(--slider-rail-background-color);
+        background-color: var(--slider-dot-background-color);
+    }
+
+    .rc-slider-dot-active {
+        border-color: var(--slider-handle-border-color);
+    }
+
+    .rc-slider-disabled {
+        background-color: var(--slider-disabled-background-color);
+    }
+
+    .rc-slider-disabled .rc-slider-track {
+        background-color: var(--slider-disabled-background-color);
+    }
+
+    .rc-slider-disabled .rc-slider-handle,
+    .rc-slider-disabled .rc-slider-dot {
+        border-color: var(--slider-disabled-border-color);
+        background-color: var(--slider-dot-background-color);
+    }
+
+    .slider-tooltip {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, calc(-100% - 4px));
+        padding: calc(var(--padding-sm) / 2) var(--padding-sm);
+        font-size: var(--font-size-sm);
+        color: var(--tooltip-color);
+        background-color: var(--tooltip-background-color);
+    }
+}

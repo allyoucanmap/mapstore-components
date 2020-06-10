@@ -1,0 +1,224 @@
+
+$color: #333333;
+$background-color: #ffffff;
+$border-color: #eeeeee;
+
+$placeholder-color: #999999;
+
+$primary: #4e59c0;
+
+$button-color: $color;
+$button-background-color: $background-color;
+$button-border-color: $border-color;
+$button-disabled-color: #aaaaaa;
+$button-disabled-background-color: #dddddd;
+$button-disabled-border-color: #cccccc;
+
+$button-primary-color: #ffffff;
+$button-primary-background-color: $primary;
+$button-primary-border-color: darken($primary, 10%);
+$button-primary-outline-color: #98d9ff;
+$button-primary-disabled-color: $button-primary-color;
+$button-primary-disabled-background-color: grayscale($button-primary-background-color);
+$button-primary-disabled-border-color: grayscale($button-primary-border-color);
+$button-primary-loader-border-color: $button-primary-color;
+$button-primary-loader-fade-border-color: rgba($button-primary-color, 0.2);
+
+$button-success-color: #333333;
+$button-success-background-color: #79cebb;
+$button-success-border-color: #3fdbb9;
+$button-success-outline-color: #b5ffc8;
+$button-success-disabled-color: $button-success-color;
+$button-success-disabled-background-color: grayscale($button-success-background-color);
+$button-success-disabled-border-color: grayscale($button-success-border-color);
+$button-success-loader-border-color: $button-success-color;
+$button-success-loader-fade-border-color: rgba($button-success-color, 0.2);
+
+$selected-color: #f2f2f2;
+$selected-background-color: lighten($primary, 15%);
+
+$highlight-color: #333333;
+$highlight-background-color: #fff200;
+
+$button-selected-color: $selected-color;
+$button-selected-background-color: $selected-background-color;
+$button-selected-border-color: darken($selected-background-color, 10%);
+$button-selected-outline-color: lighten($selected-background-color, 10%);
+$button-selected-disabled-color: $button-selected-color;
+$button-selected-disabled-background-color: grayscale($button-selected-background-color);
+$button-selected-disabled-border-color: grayscale($button-selected-border-color);
+$button-selected-loader-border-color: $button-selected-color;
+$button-selected-loader-fade-border-color: rgba($button-selected-color, 0.2);
+
+$loader-border-color: $color;
+$loader-fade-border-color: rgba($color, 0.2);
+
+$tooltip-color: #ffffff;
+$tooltip-background-color: rgba(0, 0, 0, 0.95);
+
+$outline-color: #98d9ff;
+
+$slider-rail-background-color: #dddddd;
+$slider-track-background-color: lighten($primary, 10%);
+$slider-handle-border-color: lighten($primary, 5%);
+$slider-handle-background-color: darken($primary, 5%);
+
+$slider-handle-border-color-active: $outline-color;
+$slider-tap-highlight-color: rgba(0, 0, 0, 0);
+
+$slider-dot-background-color: #ffffff;
+
+$slider-disabled-background-color: grayscale($slider-track-background-color);
+$slider-disabled-border-color: grayscale($slider-handle-border-color);
+
+$font-size-sm: 10px;
+$font-size-md: 14px;
+$font-size-lg: 20px;
+
+$padding-sm: 3px;
+$padding-md: 6px;
+$padding-lg: 12px;
+
+$button-square-size-sm: 20px;
+$button-square-font-size-sm: 10px;
+
+$button-square-size-md: 28px;
+$button-square-font-size-md: 16px;
+
+$button-square-size-lg: 42px;
+$button-square-font-size-lg: 28px;
+
+:root {
+    --color: #{$color};
+    --background-color: #{$background-color};
+    --border-color: #{$border-color};
+    --outline-color: #{$outline-color};
+    --placeholder-color: #{$placeholder-color};
+
+    --map-background-color: #{darken($background-color, 5%)};
+
+    --selected-color: #{$selected-color};
+    --selected-background-color: #{$selected-background-color};
+
+    --highlight-color: #{$highlight-color};
+    --highlight-background-color: #{$highlight-background-color};
+
+    // default
+    --button-color: #{$button-color};
+    --button-background-color: #{$button-background-color};
+    --button-border-color: #{$button-border-color};
+    --button-outline-color: #{$outline-color};
+
+    --button-hover-color: #{$button-color};
+    --button-hover-background-color: #{darken($button-background-color, 5%)};
+    --button-hover-border-color: #{darken($button-border-color, 5%)};
+
+    --button-active-color: #{$button-color};
+    --button-active-background-color: #{darken($button-background-color, 10%)};
+    --button-active-border-color: #{darken($button-border-color, 10%)};
+
+    --button-disabled-color: #{$button-disabled-color};
+    --button-disabled-background-color: #{$button-disabled-background-color};
+    --button-disabled-border-color: #{$button-disabled-border-color};
+
+    --button-loader-border-color: #{$loader-border-color};
+    --button-loader-fade-border-color: #{$loader-fade-border-color};
+
+    // primary
+    --button-primary-color: #{$button-primary-color};
+    --button-primary-background-color: #{$button-primary-background-color};
+    --button-primary-border-color: #{$button-primary-border-color};
+    --button-primary-outline-color: #{$button-primary-outline-color};
+
+    --button-primary-hover-color: #{$button-primary-color};
+    --button-primary-hover-background-color: #{darken($button-primary-background-color, 5%)};
+    --button-primary-hover-border-color: #{darken($button-primary-border-color, 5%)};
+
+    --button-primary-active-color: #{$button-primary-color};
+    --button-primary-active-background-color: #{darken($button-primary-background-color, 15%)};
+    --button-primary-active-border-color: #{darken($button-primary-border-color, 15%)};
+
+    --button-primary-disabled-color: #{$button-primary-disabled-color};
+    --button-primary-disabled-background-color: #{$button-primary-disabled-background-color};
+    --button-primary-disabled-border-color: #{$button-primary-disabled-border-color};
+
+    --button-primary-loader-border-color: #{$button-primary-loader-border-color};
+    --button-primary-loader-fade-border-color: #{$button-primary-loader-fade-border-color};
+
+    // success
+    --button-success-color: #{$button-success-color};
+    --button-success-background-color: #{$button-success-background-color};
+    --button-success-border-color: #{$button-success-border-color};
+    --button-success-outline-color: #{$button-success-outline-color};
+
+    --button-success-hover-color: #{$button-success-color};
+    --button-success-hover-background-color: #{darken($button-success-background-color, 10%)};
+    --button-success-hover-border-color: #{darken($button-success-border-color, 10%)};
+
+    --button-success-active-color: #{$button-success-color};
+    --button-success-active-background-color: #{darken($button-success-background-color, 15%)};
+    --button-success-active-border-color: #{darken($button-success-border-color, 15%)};
+
+    --button-success-disabled-color: #{$button-success-disabled-color};
+    --button-success-disabled-background-color: #{$button-success-disabled-background-color};
+    --button-success-disabled-border-color: #{$button-success-disabled-border-color};
+    --button-success-loader-border-color: #{$button-success-loader-border-color};
+    --button-success-loader-fade-border-color: #{$button-success-loader-fade-border-color};
+
+    // selected
+    --button-selected-color: #{$button-selected-color};
+    --button-selected-background-color: #{$button-selected-background-color};
+    --button-selected-border-color: #{$button-selected-border-color};
+    --button-selected-outline-color: #{$button-selected-outline-color};
+
+    --button-selected-hover-color: #{$button-selected-color};
+    --button-selected-hover-background-color: #{darken($button-selected-background-color, 10%)};
+    --button-selected-hover-border-color: #{darken($button-selected-border-color, 10%)};
+
+    --button-selected-active-color: #{$button-selected-color};
+    --button-selected-active-background-color: #{darken($button-selected-background-color, 15%)};
+    --button-selected-active-border-color: #{darken($button-selected-border-color, 15%)};
+
+    --button-selected-disabled-color: #{$button-selected-disabled-color};
+    --button-selected-disabled-background-color: #{$button-selected-disabled-background-color};
+    --button-selected-disabled-border-color: #{$button-selected-disabled-border-color};
+    --button-selected-loader-border-color: #{$button-selected-loader-border-color};
+    --button-selected-loader-fade-border-color: #{$button-selected-loader-fade-border-color};
+
+    // loader
+    --loader-border-color: #{$loader-border-color};
+    --loader-fade-border-color: #{$loader-fade-border-color};
+
+    // tooltip
+    --tooltip-color: #{$tooltip-color};
+    --tooltip-background-color: #{$tooltip-background-color};
+
+    // slider
+    --slider-rail-background-color: #{$slider-rail-background-color};
+    --slider-track-background-color: #{$slider-track-background-color};
+    --slider-handle-border-color: #{$slider-handle-border-color};
+    --slider-handle-background-color: #{$slider-handle-background-color};
+    --slider-handle-border-color-active: #{$slider-handle-border-color-active};
+    --slider-tap-highlight-color: #{$slider-tap-highlight-color};
+    --slider-dot-background-color: #{$slider-dot-background-color};
+    --slider-disabled-background-color: #{$slider-disabled-background-color};
+    --slider-disabled-border-color: #{$slider-disabled-border-color};
+
+    // size
+    --font-size-sm: #{$font-size-sm};
+    --font-size-md: #{$font-size-md};
+    --font-size-lg: #{$font-size-lg};
+
+    --padding-sm: #{$padding-sm};
+    --padding-md: #{$padding-md};
+    --padding-lg: #{$padding-lg};
+
+    --button-square-size-sm: #{$button-square-size-sm};
+    --button-square-font-size-sm: #{$button-square-font-size-sm};
+
+    --button-square-size-md: #{$button-square-size-md};
+    --button-square-font-size-md: #{$button-square-font-size-md};
+
+    --button-square-size-lg: #{$button-square-size-lg};
+    --button-square-font-size-lg: #{$button-square-font-size-lg};
+}
